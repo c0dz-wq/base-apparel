@@ -1,16 +1,16 @@
 const form = document.querySelector('.form')
-const email = document.getElementById('emailInput')
-const warningElement = document.getElementById('warningContainer')
+const email = document.querySelector('#emailInput')
+const warningElement = document.querySelector('#warningContainer')
 
 const validateForm = () => {
   const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 
   if (isValid.test(email.value)) {
-  	warningElement.innerHTML = ''
-  	email.classList.remove('invalid')
+    warningElement.innerHTML = ''
+    email.classList.remove('invalid')
   } else {
-  	warningElement.innerHTML = '<p class="errorMsg">Please provide a valid email</p>'
-  	email.classList.add('invalid')
+    warningElement.innerHTML = '<p class="errorMsg">Please provide a valid email</p>'
+    email.classList.add('invalid')
   }
 }
 
